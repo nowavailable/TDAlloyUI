@@ -1,0 +1,16 @@
+{
+  "name": "tdalloy-ui",
+  "version": "0.0.1-alpha.0",
+  "authors": [
+    "Taiga Tsutsumi"
+  ],
+  "license": "GPL 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
