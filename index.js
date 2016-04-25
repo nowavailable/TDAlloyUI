@@ -1,15 +1,5 @@
 'use strict';
 
-require("babel-polyfill");
-
-import React from 'react'
-import ReactDOM from 'react-dom'
-import createBrowserHistory from 'history/lib/createBrowserHistory'
-import { Router, useRouterHistory } from 'react-router'
-import { syncHistoryWithStore } from 'react-router-redux'
-import createStore from './store/createStore'
-import { Provider } from 'react-redux'
-
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
@@ -17,8 +7,8 @@ let mainWindow;
 
 function createWindow () {
   mainWindow = new BrowserWindow({width: 1300, height: 840});
-
-  mainWindow.loadURL('file://' + __dirname + '/index_electron.html');
+  // mainWindow.loadURL('file://' + __dirname + '/index.html');
+  mainWindow.loadURL('file://' + __dirname + '/dist/index.html');
 
   mainWindow.webContents.openDevTools();
 
@@ -49,6 +39,5 @@ app.on('activate', function () {
   if (mainWindow === null) {
     createWindow();
   }
-
 
 });
