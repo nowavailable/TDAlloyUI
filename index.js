@@ -1,11 +1,26 @@
 'use strict';
 
+const exec = require('child_process').exec;
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
 
 function createWindow () {
+  var command = 'java -jar ./dist/tdalloy-0.1.0-SNAPSHOT-jar-with-dependencies.jar';
+  command = 'pwd';
+  exec(command, (error, stdout, stderr) => {
+    // TODO: 
+    if (stdout) {
+      console.log(stdout)
+    }
+    if (error) {
+      console.log(error)
+    } else if (stderr) {
+      console.log(stderr);
+    }
+  });
+
   mainWindow = new BrowserWindow({width: 1300, height: 840});
   // mainWindow.loadURL('file://' + __dirname + '/index.html');
   mainWindow.loadURL('file://' + __dirname + '/dist/index.html');
