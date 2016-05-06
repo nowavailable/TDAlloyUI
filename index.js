@@ -8,9 +8,8 @@ let mainWindow;
 
 function createWindow () {
   var command = 'java -jar ./dist/tdalloy-0.1.0-SNAPSHOT-jar-with-dependencies.jar';
-  command = 'pwd';
   exec(command, (error, stdout, stderr) => {
-    // TODO: 
+    // TODO:
     if (stdout) {
       console.log(stdout)
     }
